@@ -23,11 +23,15 @@ docker run uzyexe/nmap [Scan Type(s)] [Options] {target specification}
 
 ### Case 1: Simple Scan
 
+```
 docker run uzyexe/nmap example.com
+```
 
 ### Case 2 : Port-80 Simple Scan
 
+```
 docker run uzyexe/nmap -p 80 example.com
+```
 
 ### Help
 
