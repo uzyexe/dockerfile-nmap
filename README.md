@@ -1,10 +1,12 @@
+[![](https://badge.imagelayers.io/uzyexe/nmap:latest.svg)](https://imagelayers.io/?images=uzyexe/nmap:latest 'Get your own badge on imagelayers.io')
+
 # uzyexe/nmap
 
-This is nmap container (14.93MB).
+This is nmap container.
 
 ## What is nmap
 
-Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing. 
+Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing.
 
 [http://nmap.org/](http://nmap.org/)
 
