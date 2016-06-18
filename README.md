@@ -20,25 +20,26 @@ This Docker image is based on the [progrium/busybox
 ## How to use this image
 
 ```
-docker run uzyexe/nmap [Scan Type(s)] [Options] {target specification}
+docker run --rm uzyexe/nmap [Scan Type(s)] [Options] {target specification}
 ```
 
 ### Case 1: Simple Scan
 
 ```
-docker run uzyexe/nmap example.com
+docker run --rm uzyexe/nmap example.com
 ```
 
 ### Case 2 : Port-80 Simple Scan
 
 ```
-docker run uzyexe/nmap -p 80 example.com
+docker run --rm uzyexe/nmap -p 80 example.com
 ```
 
 ### Help
 
 ```
-Usage: docker run uzyexe/nmap [Scan Type(s)] [Options] {target specification}
+Nmap 7.12 ( https://nmap.org )
+Usage: docker run --rm uzyexe/nmap [Scan Type(s)] [Options] {target specification}
 TARGET SPECIFICATION:
   Can pass hostnames, IP addresses, networks, etc.
   Ex: scanme.nmap.org, microsoft.com/24, 192.168.0.1; 10.0.0-255.1-254
@@ -69,6 +70,7 @@ SCAN TECHNIQUES:
 PORT SPECIFICATION AND SCAN ORDER:
   -p <port ranges>: Only scan specified ports
     Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
+  --exclude-ports <port ranges>: Exclude the specified ports from scanning
   -F: Fast mode - Scan fewer ports than the default scan
   -r: Scan ports consecutively - don't randomize
   --top-ports <number>: Scan <number> most common ports
@@ -103,6 +105,8 @@ FIREWALL/IDS EVASION AND SPOOFING:
   -e <iface>: Use specified interface
   -g/--source-port <portnum>: Use given port number
   --proxies <url1,[url2],...>: Relay connections through HTTP/SOCKS4 proxies
+  --data <hex string>: Append a custom payload to sent packets
+  --data-string <string>: Append a custom ASCII string to sent packets
   --data-length <num>: Append random data to sent packets
   --ip-options <options>: Send packets with specified ip options
   --ttl <val>: Set IP time-to-live field
@@ -118,7 +122,6 @@ OUTPUT:
   --open: Only show open (or possibly open) ports
   --packet-trace: Show all packets sent and received
   --iflist: Print host interfaces and routes (for debugging)
-  --log-errors: Log errors/warnings to the normal-format output file
   --append-output: Append to rather than clobber specified output files
   --resume <filename>: Resume an aborted scan
   --stylesheet <path/URL>: XSL stylesheet to transform XML output to HTML
@@ -137,5 +140,5 @@ EXAMPLES:
   nmap -v -A scanme.nmap.org
   nmap -v -sn 192.168.0.0/16 10.0.0.0/8
   nmap -v -iR 10000 -Pn -p 80
-SEE THE MAN PAGE (http://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
+SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 ```
