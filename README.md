@@ -14,8 +14,7 @@ Nmap ("Network Mapper") is a free and open source (license) utility for network 
 
 [**Trusted Build**](https://registry.hub.docker.com/u/uzyexe/nmap/)
 
-This Docker image is based on the [progrium/busybox
-](https://registry.hub.docker.com/u/progrium/busybox/) base image.
+This Docker image is based on the [progrium/busybox](https://registry.hub.docker.com/u/progrium/busybox/) base image.
 
 ## How to use this image
 
