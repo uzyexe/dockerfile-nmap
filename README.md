@@ -19,7 +19,7 @@ This Docker image is based on the [progrium/busybox](https://registry.hub.docker
 ## How to use this image
 
 ```
-docker run --rm uzyexe/nmap [Scan Type(s)] [Options] {target specification}
+docker run --rm -v "$(pwd)":/data uzyexe/nmap [Scan Type(s)] [Options] {target specification}
 ```
 
 ### Case 1: Simple Scan
