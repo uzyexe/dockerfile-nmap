@@ -37,7 +37,7 @@ docker run --rm uzyexe/nmap -p 80 example.com
 ### Help
 
 ```
-Nmap 7.12 ( https://nmap.org )
+Nmap 7.80 ( https://nmap.org )
 Usage: docker run --rm uzyexe/nmap [Scan Type(s)] [Options] {target specification}
 TARGET SPECIFICATION:
   Can pass hostnames, IP addresses, networks, etc.
